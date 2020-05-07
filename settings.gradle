@@ -1,0 +1,2 @@
+rootProject.name='ViolinApp'
+include ':app'
