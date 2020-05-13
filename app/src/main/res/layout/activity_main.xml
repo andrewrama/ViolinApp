@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/violinappbackground">
 
     <TextView
+        android:layout_margin="50dp"
+        android:textSize="26sp"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Violin Tools"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+         />
+    <Button
+        android:layout_margin="35dp"
+        android:text="Go to Tuner"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuner"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:onClick="toTuner"/>
+    <Button
+        android:layout_margin="35dp"
+        android:text="Go to Practice Log"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:id="@+id/practiceLog" />
+    <Button
+        android:layout_margin="35dp"
+        android:text="Go to Exercises"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:id="@+id/exercises" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

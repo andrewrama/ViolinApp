@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TunerActivity"
+    android:orientation="vertical"
+    android:background="@drawable/violintunerbackground">
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G String"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:layout_margin="35dp"
+        android:onClick="playG"/>
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:text="D String"
+        android:layout_margin="35dp"
+        android:onClick="playD"/>
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:text="A String"
+        android:layout_margin="35dp"
+        android:onClick="playA"/>
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E String"
+        android:layout_margin="35dp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:onClick="playE"/>
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Home"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_margin="35dp"
+        android:onClick="backToHome"/>
+
+</LinearLayout>
