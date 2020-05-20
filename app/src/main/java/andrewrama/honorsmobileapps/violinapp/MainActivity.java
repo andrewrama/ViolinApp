@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, TunerActivity.class);
         startActivity(i);
     }
+    public void practiceLog(View v){
+        Intent i = new Intent(this, PracticeLogActivity.class);
+        startActivity(i);
+    }
 }
