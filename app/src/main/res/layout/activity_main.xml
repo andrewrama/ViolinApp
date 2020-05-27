@@ -46,6 +46,7 @@
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:background="#FFFFFF"
-        android:id="@+id/exercises" />
+        android:id="@+id/exercises"
+        android:onClick="exercise"/>
 
 </LinearLayout>

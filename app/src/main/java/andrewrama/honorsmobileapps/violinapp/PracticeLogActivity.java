@@ -22,7 +22,6 @@ public class PracticeLogActivity extends AppCompatActivity {
     ArrayList<Session> sessions;
     private final Context context=this;
     private static final String KEY_SESSIONS = "sessions";
-    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
