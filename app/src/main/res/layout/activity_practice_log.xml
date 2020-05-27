@@ -16,7 +16,8 @@
         android:layout_margin="35dp"
         android:background="#FFFFFF"
         android:textColor="#000000"
-        android:id="@+id/addnew" />
+        android:id="@+id/addnew"
+        android:onClick="addNewSession"/>
 
     <ScrollView
         android:layout_width="match_parent"
