@@ -19,7 +19,7 @@
         android:textStyle="bold"
          />
     <Button
-        android:layout_margin="35dp"
+        android:layout_margin="30dp"
         android:text="Go to Tuner"
         android:layout_gravity="center"
         android:layout_width="150dp"
@@ -29,7 +29,7 @@
         android:background="#FFFFFF"
         android:onClick="toTuner"/>
     <Button
-        android:layout_margin="35dp"
+        android:layout_margin="30dp"
         android:text="Go to Practice Log"
         android:layout_gravity="center"
         android:layout_width="150dp"
@@ -39,7 +39,7 @@
         android:id="@+id/practiceLog"
         android:onClick="practiceLog"/>
     <Button
-        android:layout_margin="35dp"
+        android:layout_margin="30dp"
         android:text="Go to Exercises"
         android:layout_gravity="center"
         android:layout_width="150dp"
@@ -48,5 +48,15 @@
         android:background="#FFFFFF"
         android:id="@+id/exercises"
         android:onClick="exercise"/>
+    <Button
+        android:layout_margin="30dp"
+        android:text="Go to Recording"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:id="@+id/recording"
+        android:onClick="recording"/>
 
 </LinearLayout>

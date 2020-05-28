@@ -28,4 +28,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, ExerciseActivity.class);
         startActivity(i);
     }
+    public void recording(View v){
+        Intent i = new Intent(this, RecordingActivity.class);
+        startActivity(i);
+    }
 }

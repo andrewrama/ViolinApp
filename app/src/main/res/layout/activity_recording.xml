@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordingActivity"
+    android:orientation="vertical"
+    android:background="#E1C699">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:paddingTop="20dp" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="Record"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:id="@+id/recordbutton"
+            android:textSize="26sp"
+            android:layout_weight="1"
+            android:onClick="recordStop"/>
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="Play"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:id="@+id/playbutton"
+            android:textSize="26sp"
+            android:layout_weight="1"
+            android:onClick="playStop"/>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:src="@drawable/violin2"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Back To Home"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:id="@+id/backtohome"
+        android:onClick="backToHome4"/>
+
+</LinearLayout>
