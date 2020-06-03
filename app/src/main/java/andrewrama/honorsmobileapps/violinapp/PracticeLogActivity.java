@@ -8,11 +8,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class PracticeLogActivity extends AppCompatActivity {
@@ -21,19 +30,29 @@ public class PracticeLogActivity extends AppCompatActivity {
     private SessionAdapter mAdapter;
     ArrayList<Session> sessions;
     private final Context context=this;
+    String FILENAME = "sessions_file";
     private static final String KEY_SESSIONS = "sessions";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practice_log);
+        sessions = new ArrayList<>();
+        try{
+            FileInputStream fis = openFileInput(FILENAME);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            sessions = (ArrayList<Session>) ois.readObject();
+            ois.close();
+            fis.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
-        if(Session.getSessionList()!=null) {
-            sessions = Session.getSessionList();
-        }
-        else{
-            sessions = new ArrayList<>();
-        }
+
+
+
+
         mRecyclerView = findViewById(R.id.logRecyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -82,9 +101,19 @@ public class PracticeLogActivity extends AppCompatActivity {
     @Override
     public void onStop(){
         super.onStop();
-        Session.setSessionList(sessions);
+
+        try{
+            FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(sessions);
+            oos.close();
+            fos.close();
+        } catch(Exception e){
+            Log.e("ERROR", e.toString());
+        }
     }
     public ArrayList<Session> getSessionsList(){
         return sessions;
     }
+
 }
